@@ -1,0 +1,13 @@
+import gym
+env = gym.make("ALE/MsPacman-v5", render_mode="human")
+env.action_space.seed(69)
+
+observation, info = env.reset(seed=69)
+
+for _ in range(1000):
+    observation, reward, terminated, truncated, info = env.step(env.action_space.sample())
+
+    if terminated or truncated:
+        observation, info = env.reset()
+
+env.close()
