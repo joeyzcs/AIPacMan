@@ -1,6 +1,6 @@
-import gymnasium
+import gymnasium as gym
 #import time
-env = gymnasium.make("ALE/MsPacman-v5", render_mode="human")
+env = gym.make("ALE/MsPacman-v5", render_mode="human")
 env.action_space.seed(42)
 
 observation, info = env.reset(seed=42)
