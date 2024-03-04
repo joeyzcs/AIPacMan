@@ -1,10 +1,4 @@
-import random
 import gym
-
-env = gym.make("CartPole-v1", render_mode='human')
-
-print("Observation space:", env.observation_space)
-print("Action space:", env.action_space)
 
 
 class Agent():
@@ -18,6 +12,11 @@ class Agent():
         action = 0 if pole_angle < 0 else 1
         return action
 
+
+env = gym.make("CartPole-v1", render_mode='human')
+
+print("Observation space:", env.observation_space)
+print("Action space:", env.action_space)
 
 agent = Agent(env)
 state = env.reset()
