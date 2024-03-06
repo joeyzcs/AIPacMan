@@ -22,7 +22,7 @@ agent = Agent(env)
 state = env.reset()
 
 
-for _ in range(200):
+for _ in range(400):
     #  action = env.action_space.sample()
     action = agent.get_action(state)
     state, reward, done, info = env.step(action)

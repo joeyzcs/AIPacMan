@@ -48,7 +48,7 @@ env.close()
 """
 RL practice packages - required versions
 
-tensorflow 2.10
+tensorflow 2.12.0
 keras-rl2 1.0.5
 gym 0.25.2
 
