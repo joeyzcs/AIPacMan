@@ -13,20 +13,21 @@ class Agent():
         return action
 
 
-env = gym.make("CartPole-v1", render_mode='human')
+while True:
+    env = gym.make("CartPole-v1", render_mode='human')
 
-print("Observation space:", env.observation_space)
-print("Action space:", env.action_space)
+    print("Observation space:", env.observation_space)
+    print("Action space:", env.action_space)
 
-agent = Agent(env)
-state = env.reset()
-
-
-for _ in range(400):
-    #  action = env.action_space.sample()
-    action = agent.get_action(state)
-    state, reward, done, info = env.step(action)
-    env.render()
+    agent = Agent(env)
+    state = env.reset()
 
 
-env.close()
+    for _ in range(200):
+        #  action = env.action_space.sample()
+        action = agent.get_action(state)
+        state, reward, done, info = env.step(action)
+        env.render()
+
+
+    env.close()

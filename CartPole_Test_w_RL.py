@@ -35,7 +35,7 @@ agent = DQNAgent(
 # Compile the agent
 agent.compile(Adam(learning_rate=0.001), metrics=["mae"])
 # Train the agent - adjust nb_steps= to train agent further
-agent.fit(env, nb_steps=75000, visualize=False, verbose=1)
+agent.fit(env, nb_steps=100000, visualize=False, verbose=1)
 
 # Test the agent
 results = agent.test(env, nb_episodes=100, visualize=True)
