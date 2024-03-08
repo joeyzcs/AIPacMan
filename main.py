@@ -1,3 +1,5 @@
+#pip install gymnasium[atari, accept-rom-license]
+
 import gymnasium
 import time
 import numpy as np
