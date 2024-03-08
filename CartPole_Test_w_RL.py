@@ -38,7 +38,7 @@ agent.compile(Adam(learning_rate=0.001), metrics=["mae"])
 agent.fit(env, nb_steps=100000, visualize=False, verbose=1)
 
 # Test the agent
-results = agent.test(env, nb_episodes=10, visualize=True)
+results = agent.test(env, nb_episodes=100, visualize=True)
 print(np.mean(results.history["episode_reward"]))
 
 # Close the environment

@@ -1,3 +1,5 @@
+#pip install gymnasium[atari, accept-rom-license]
+
 import gymnasium
 import time
 import numpy as np
@@ -10,7 +12,7 @@ observation, info = env.reset(seed=42)  # Reset to initial state
 print(env.observation_space)
 print(env.observation_space.sample())
 
-"""
+
 for _ in range(1000):
     observation, reward, terminated, truncated, info = env.step(env.action_space.sample())  #  Update environment (action)
 
@@ -20,5 +22,5 @@ for _ in range(1000):
     if terminated or truncated:  #  Reach end of state
         observation, info = env.reset()
 
-"""
+
 env.close()
