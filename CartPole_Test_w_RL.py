@@ -23,7 +23,7 @@ model.add(Dense(actions, activation="linear"))
 print("States: ", states, " Actions: ", actions)
 
 # Initialize the agent
-agent = DQNAgent(
+agent = DQNAgent(-
     model=model,
     memory=SequentialMemory(limit=50000, window_length=1),
     policy=BoltzmannQPolicy(),
